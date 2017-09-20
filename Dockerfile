@@ -17,6 +17,8 @@ WORKDIR $HUBOT_HOME_DIR
 # install yeoman and generator
 RUN npm config set registry http://registry.npmjs.org/
 RUN npm install -g yo generator-hubot
+RUN npm install htmlparser
+RUN npm install soupselect
 
 # Setup hubot (with Jenkins integration scripts)
 RUN mkdir ws && cd ws \
